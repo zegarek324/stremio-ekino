@@ -72,5 +72,5 @@ builder.defineStreamHandler(async (args) => {
     return { streams: [{ title: "Odtwórz (Test)", url: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" }] };
 });
 
-serveHTTP(builder.getInterface(), { port: 7000 });
+serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 });
 console.log("Serwer poprawiony działa na porcie 7000!");
